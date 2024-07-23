@@ -1,11 +1,11 @@
 FROM filegator/filegator
-
-# Copy demo files
+LABEL description="This leverages filtgator original git repo at: https://github.com/filegator/filegator/tree/master"
+MAINTAINER Syed Hassan <>
+WORKDIR "/var/www/filegator/"
+USER www-data
 COPY configuration.php /var/www/filegator/
 COPY users.json /var/www/filegator/private/
 COPY filegator.jpeg /var/www/filegator/dist/
-
-# Fix permissions so that demo is read-only
-USER www-data
-
+# RUN cp /filegator.jpeg /var/www/filegator/dist/filegator.jpeg; rm /filegator.jpeg; 
+# RUN cp /configuration.php /var/www/filegator/configuration.php; rm /configuration.php;
 CMD ["apache2-foreground"]
