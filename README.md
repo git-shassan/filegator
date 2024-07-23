@@ -27,7 +27,7 @@ docker run -d -p 8888:8080 -v ~/myfiles:/var/www/filegator/repository --name fil
 To loginto the system, simply point your browser to the server's IP/url and port 8888. 
 
 Once you create your own users (and delete existing users provided in the sample file), you can bacup your user database for any future use by using: 
-``
+```
 docker cp filegator:/var/www/filegator/private/users.json ./users.json
 docker cp filegator:/var/www/filegator/configuration.php ./configuration.php
 ```
