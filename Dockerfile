@@ -7,4 +7,4 @@ USER www-data
 # COPY configuration.php /var/www/filegator/
 # to include a custom splashscreen, create a simple jpeg (320x120) and include that by uncommenting the following line
 # COPY filegator.jpeg /var/www/filegator/dist/
-CMD ["apache2-foreground"]
+CMD ["/bin/bash", "-c", "chown -R www-data:www-data /var/www/filegator/repository && exec apache2-foreground"]
