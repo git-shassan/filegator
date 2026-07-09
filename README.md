@@ -1,3 +1,13 @@
+# Purpose of this doc: 
+Deploy an interface that would allow upload/download of files from your local server, while meeting the following key requirements: 
+* any application used is not allowed to access anything on the internet
+* users shoudl be authenticated before they can upload/download
+* the applicaiton should follow strict security guidelies
+* accessible via HTTPS
+* looks and cosmetics can be customized
+
+One application that meets these needs is "FileGator". Additionally, to restict its access, I will recommmend running it in an isolated root-less container. This Repo shows you all the steps you need to take to achieve that 
+
 # Filegator
 Filegator is a simple GUI application that provides capability to upload and manage files on a server. It offers multiple tenants/users capability as well. 
 
