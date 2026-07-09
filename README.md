@@ -12,12 +12,16 @@ The default for this field is 100MB. You can change it if you find it acceptable
 ### Simultaneous uploads:
 Default is 3 for 'upload_simultaneous'. 
 
-## Custom splash screen:
+### Custom splash screen:
 You can replace the splash screen and logo in filegator by using your own image (JPEG, SVG etc.) The default file can be replaced by your own, and the name of the file to be used is provided in the field `logo`. 
 For example, if the new file is called 'filegator.jpeg', it needs to be placed into the '/var/www/filegator/dist/' directory (don't worry, the Dockerbuild file will take care of this) and then the logo variable needs to say : 
 ```
         'logo' => './filegator.jpeg',
 ```
+
+### Other configurations:
+You can checkout [this FAQ](https://filegator.io/faq/)  page for many other configuraiton items - though this page is for an older version its still quite userufl. 
+For more details on the new versions configuration.php file, refer to [this github page](https://github.com/filegator/filegator/tree/master/docs)
 
 ## Building the Container:
 Now that the configuration is defined, use the provided Dockerfile, place it in a directory where you also have `configuration.php`,  and `filegator.jpeg`(for logo of your personalized environment). 
